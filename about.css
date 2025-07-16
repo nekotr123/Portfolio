@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  text-align: center;
+}
+
+#wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.site-title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.site-title a {
+  color: #f0f000;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #444;
+}
+
+.top-visual {
+  width: 100%;
+  height: 80px;
+  background: url('images/about_bg.png') no-repeat center center / cover;
+  margin-bottom: 0;
+}
+
+.menu-title {
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #0ff;
+  text-shadow: 1px 1px 2px #000;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.profile-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #0ff;
+  background-color: #111;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.profile-text p {
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  margin: 80px 0 60px;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #111;
+  border-top: 2px solid #0ff;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #fff;
+  user-select: none;
+}
+
+/* レスポンシブ */
+@media (max-width: 640px) {
+  #wrap {
+    padding: 0 20px;
+  }
+
+  .menu-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-text p {
+    font-size: 12px;
+    max-width: 90%;
+  }
+
+  footer {
+    padding: 30px 0;
+    margin: 60px 0 40px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0026ff;
+  color: white;
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  text-align: center;
+}
+
+#wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.site-title {
+  font-size: 16px;
+  margin: 0;
+}
+
+.site-title a {
+  color: #f0f000;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #444;
+}
+
+.top-visual {
+  width: 100%;
+  height: 85vh;
+  background: url('images/map.jpg') no-repeat center center / cover;
+  border-bottom: 2px solid #555;
+}
+
+.menu-title {
+  margin: 20px 0 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #0ff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.character-select {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin: 20px 0 40px;
+}
+
+.character-select li {
+  width: 120px;
+  text-align: center;
+}
+
+.character-select img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  background-color: #111;
+  transition: transform 0.2s ease;
+}
+
+.character-select img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.character-select span {
+  display: block;
+  margin-top: 8px;
+  font-size: 10px;
+  color: white;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 640px) {
+  .top-visual {
+    height: 30vh;
+  }
+
+  .menu-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .character-select {
+    gap: 20px;
+  }
+
+  .character-select li {
+    width: 100px;
+  }
+
+  .character-select img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .character-select span {
+    font-size: 9px;
+  }
+}

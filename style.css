@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body {
+  font-family: 'Press Start 2P', monospace;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+#start-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/top.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* 画面下寄せ */
+  box-sizing: border-box;
+  padding-bottom: 40px; /* 下の余白 */
+}
+
+.credit {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  font-size: 14px;
+  color: #ccc;
+  user-select: none;
+}
+
+#enter-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 18px;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  /* 余計なマージンは外して下にぴったりくるように */
+  margin: 0 0 20px 0;
+}
+
+#enter-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* スマホサイズ */
+@media screen and (max-width: 600px) {
+  #start-screen {
+    background-size: 50% auto !important;
+    background-position: center top !important;
+    height: 30vh;
+    padding-bottom: 20px;
+    justify-content: flex-end;
+  }
+  #enter-btn {
+    font-size: 14px !important;
+    padding: 8px 30px !important;
+    margin: 0 0 15px 0 !important;
+  }
+  .credit {
+    font-size: 12px !important;
+    bottom: 15px !important;
+    right: 8px !important;
+  }
+}
+
+/* タブレットサイズ */
+@media screen and (max-width: 900px) {
+  #start-screen {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 70vh;
+  }
+  #enter-btn {
+    font-size: 16px !important;
+    padding: 9px 35px !important;
+  }
+}
